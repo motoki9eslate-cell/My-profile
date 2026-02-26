@@ -1,0 +1,71 @@
+/* 全体設定 */
+.my-portfolio-body {
+    background-color: #f7b7c7; /* 全体の背景色 */
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* 指摘1&2：横並び設定とスマホ対応 */
+.my-profile-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* スマホで縦に並ぶようにする */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* ロゴの設定（930px以下でも消えないように指定） */
+.my-main-logo {
+    width: 150px;
+    height: auto;
+    display: block !important; /* 絶対に消さない */
+}
+
+/* スキル表のレイアウト */
+.my-skills-grid {
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    flex-wrap: wrap; /* 画面が狭くなったら折り返す */
+    justify-content: center;
+}
+
+.skill-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-item ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* 指摘2：スマホ専用の調整（画面幅が768px以下のとき） */
+@media screen and (max-width: 768px) {
+    .my-profile-flex {
+        flex-direction: column; /* 縦に並べる */
+    }
+    .my-skills-grid {
+        gap: 10px;
+    }
+    .my-name-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* ボタンのデザイン */
+.work-btn, .github-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.work-btn { background-color: #ff99aa; color: white; }
+.github-btn { background-color: #333; color: white; font-size: 12px; }
